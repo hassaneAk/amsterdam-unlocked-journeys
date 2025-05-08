@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { coffeeShops, bikeRoutes, secretSpots } from '@/data/siteData';
@@ -17,7 +16,7 @@ const Maps = () => {
             Cartes Interactives d'Amsterdam
           </h1>
           <p className="text-xl max-w-3xl">
-            Découvrez Amsterdam à travers nos cartes personnalisées. Explorez les coffee shops emblématiques, 
+            Découvrez Amsterdam à travers nos cartes personnalisées. Explorez les cafés emblématiques, 
             les itinéraires à vélo recommandés et les lieux secrets que seuls les locaux connaissent.
           </p>
         </div>
@@ -33,7 +32,7 @@ const Maps = () => {
             className="w-full"
           >
             <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="coffee-shops">Coffee Shops</TabsTrigger>
+              <TabsTrigger value="coffee-shops">Cafés d'Amsterdam</TabsTrigger>
               <TabsTrigger value="bike-routes">Balades à Vélo</TabsTrigger>
               <TabsTrigger value="secret-spots">Amsterdam Secret</TabsTrigger>
             </TabsList>
@@ -41,16 +40,12 @@ const Maps = () => {
             <TabsContent value="coffee-shops" className="animate-fade-in">
               <div className="bg-white p-6 rounded-xl shadow-md mb-8">
                 <h2 className="text-2xl font-bold text-amsterdam-blue mb-4">
-                  Coffee Shops Emblématiques
+                  Cafés Emblématiques
                 </h2>
                 <p className="text-gray-700 mb-4">
-                  Amsterdam est connue pour ses coffee shops uniques. Découvrez notre sélection des établissements
+                  Amsterdam est connue pour ses cafés uniques. Découvrez notre sélection des établissements
                   les plus emblématiques et appréciés de la ville.
                 </p>
-                <div className="bg-amsterdam-orange/10 border border-amsterdam-orange/20 rounded-lg p-4 text-amsterdam-red">
-                  <p><strong>Note:</strong> N'oubliez pas que la consommation de cannabis est réglementée aux Pays-Bas. 
-                  Informez-vous sur les règles en vigueur avant votre visite.</p>
-                </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -79,7 +74,7 @@ const Maps = () => {
                 <h3 className="text-xl font-bold mb-4">Carte Interactive</h3>
                 <p className="text-gray-600 mb-4">
                   Désolé, la carte interactive sera disponible prochainement. Nous travaillons à intégrer 
-                  une carte dynamique avec tous les coffee shops répertoriés et des fonctionnalités de filtrage.
+                  une carte dynamique avec tous les cafés répertoriés et des fonctionnalités de filtrage.
                 </p>
                 <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
                   <p className="text-gray-500">Carte en cours de développement</p>

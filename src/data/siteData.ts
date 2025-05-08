@@ -1,33 +1,32 @@
-
 export const coffeeShops = [
   {
     id: 1,
-    name: "Bulldog Palace",
-    description: "L'un des coffee shops les plus emblématiques d'Amsterdam, situé sur Leidseplein.",
+    name: "Art Gallery Café",
+    description: "Un café tendance avec une galerie d'art intégrée, situé sur Leidseplein.",
     address: "Leidseplein 17, 1017 PS Amsterdam",
     image: "https://images.unsplash.com/photo-1594115584109-938fbcd11931",
     coordinates: [4.8827, 52.3641],
   },
   {
     id: 2,
-    name: "Greenhouse",
-    description: "Coffee shop célèbre pour son ambiance détendue et sa sélection variée.",
+    name: "Waterside Lounge",
+    description: "Café pittoresque au bord de l'eau, connu pour son ambiance détendue et sa vue sur les canaux.",
     address: "Oudezijds Voorburgwal 191, 1012 EW Amsterdam",
     image: "https://images.unsplash.com/photo-1628772201761-b9d997f90d18",
     coordinates: [4.8961, 52.3731],
   },
   {
     id: 3,
-    name: "Grey Area",
-    description: "Petit coffee shop réputé pour ses produits de qualité et son ambiance authentique.",
+    name: "Vintage Corner",
+    description: "Petit café authentique avec une décoration vintage et des produits de qualité.",
     address: "Oude Leliestraat 2, 1015 AW Amsterdam",
     image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b",
     coordinates: [4.8839, 52.3768],
   },
   {
     id: 4,
-    name: "Paradox",
-    description: "Coffee shop établi depuis longtemps, apprécié pour son atmosphère locale et détendue.",
+    name: "Canal View Café",
+    description: "Café établi depuis longtemps, apprécié pour sa vue sur les canaux et son ambiance locale et détendue.",
     address: "Eerste Bloemdwarsstraat 2, 1016 KS Amsterdam",
     image: "https://images.unsplash.com/photo-1576600245007-ba9234214895",
     coordinates: [4.8796, 52.3708],
@@ -241,8 +240,8 @@ export const topLists = [
         image: "https://images.unsplash.com/photo-1557585440-a4836ff029df",
       },
       {
-        title: "Musée du Hash, de la Marijuana et du Chanvre",
-        description: "Un regard sur l'histoire controversée et la culture du cannabis à Amsterdam.",
+        title: "Micropia",
+        description: "Le seul musée au monde des microbes, une expérience fascinante sur la vie invisible.",
         image: "https://images.unsplash.com/photo-1566834176667-7a3d6335eefc",
       },
     ]
