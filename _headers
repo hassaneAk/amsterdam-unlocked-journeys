@@ -1,12 +1,14 @@
 /*
   Content-Type: text/html; charset=utf-8
-*.js
+/src/main.js
   Content-Type: application/javascript; charset=utf-8
-*.mjs
+/*.js
   Content-Type: application/javascript; charset=utf-8
-*.ts
+/*.mjs
   Content-Type: application/javascript; charset=utf-8
-*.tsx
+/*.jsx
   Content-Type: application/javascript; charset=utf-8
-*.jsx
+/*.ts
+  Content-Type: application/javascript; charset=utf-8
+/*.tsx
   Content-Type: application/javascript; charset=utf-8
