@@ -1,0 +1,10 @@
+
+# Redirects for SPA
+/*    /index.html   200
+
+# Set MIME types (note: this is only for information - Netlify uses netlify.toml for this)
+# *.js   application/javascript
+# *.mjs  application/javascript
+# *.ts   application/javascript
+# *.tsx  application/javascript
+# *.jsx  application/javascript
