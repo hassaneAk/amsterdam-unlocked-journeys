@@ -1,5 +1,5 @@
 
-import * as React from 'https://esm.sh/react@18';
+import * as React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,40 +22,30 @@ const queryClient = new QueryClient();
 
 // Define the App component as a function that returns JSX
 const App = () => {
-  return React.createElement(
-    QueryClientProvider,
-    { client: queryClient },
-    React.createElement(
-      TooltipProvider,
-      null,
-      React.createElement(Toaster, null),
-      React.createElement(Sonner, null),
-      React.createElement(
-        BrowserRouter,
-        null,
-        React.createElement(
-          'div',
-          { className: "flex flex-col min-h-screen" },
-          React.createElement(Navbar, null),
-          React.createElement(
-            'main',
-            { className: "flex-grow" },
-            React.createElement(
-              Routes,
-              null,
-              React.createElement(Route, { path: "/", element: React.createElement(Index, null) }),
-              React.createElement(Route, { path: "/maps", element: React.createElement(Maps, null) }),
-              React.createElement(Route, { path: "/quiz", element: React.createElement(Quiz, null) }),
-              React.createElement(Route, { path: "/top-lists", element: React.createElement(TopLists, null) }),
-              React.createElement(Route, { path: "/about", element: React.createElement(About, null) }),
-              React.createElement(Route, { path: "/contact", element: React.createElement(Contact, null) }),
-              React.createElement(Route, { path: "*", element: React.createElement(NotFound, null) })
-            )
-          ),
-          React.createElement(Footer, null)
-        )
-      )
-    )
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow">
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/maps" element={<Maps />} />
+                <Route path="/quiz" element={<Quiz />} />
+                <Route path="/top-lists" element={<TopLists />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
   );
 };
 
