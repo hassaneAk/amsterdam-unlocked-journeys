@@ -7,16 +7,28 @@
   AddType application/javascript .tsx
 </IfModule>
 
-# Fallback for servers that don't use Apache
-<Files *.js>
-  Header set Content-Type "application/javascript"
-</Files>
-<Files *.mjs>
-  Header set Content-Type "application/javascript"
-</Files>
-<Files *.ts>
-  Header set Content-Type "application/javascript"
-</Files>
-<Files *.tsx>
-  Header set Content-Type "application/javascript"
-</Files>
+# Set JavaScript MIME types with headers
+<FilesMatch "\.(js|mjs|ts|tsx)$">
+  Header set Content-Type "application/javascript; charset=utf-8"
+  Header set X-Content-Type-Options "nosniff"
+</FilesMatch>
+
+# Force text/javascript for older servers
+<IfModule !mod_mime.c>
+  <FilesMatch "\.js$">
+    ForceType application/javascript
+  </FilesMatch>
+  <FilesMatch "\.(ts|tsx|mjs)$">
+    ForceType application/javascript
+  </FilesMatch>
+</IfModule>
+
+# SPA redirect
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
