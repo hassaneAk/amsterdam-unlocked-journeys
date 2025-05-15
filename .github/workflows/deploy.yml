@@ -28,19 +28,21 @@ jobs:
           npm ci
           npm run build
 
-      - name: Create _headers file for MIME types 📝
+      - name: Create custom _headers file 📝
         run: |
           echo "/*" > ./dist/_headers
           echo "  Content-Type: text/html; charset=utf-8" >> ./dist/_headers
-          echo "*.js" >> ./dist/_headers
+          echo "/src/main.js" >> ./dist/_headers
           echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
-          echo "*.mjs" >> ./dist/_headers
+          echo "/*.js" >> ./dist/_headers
           echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
-          echo "*.ts" >> ./dist/_headers
+          echo "/*.mjs" >> ./dist/_headers
           echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
-          echo "*.tsx" >> ./dist/_headers
+          echo "/*.jsx" >> ./dist/_headers
           echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
-          echo "*.jsx" >> ./dist/_headers
+          echo "/*.ts" >> ./dist/_headers
+          echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
+          echo "/*.tsx" >> ./dist/_headers
           echo "  Content-Type: application/javascript; charset=utf-8" >> ./dist/_headers
 
       - name: Configure Git
