@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react({
-      jsxRuntime: 'automatic',
+      // Remove jsxRuntime property as it's not supported in the type definition
     }),
     mode === 'development' &&
     componentTagger(),
