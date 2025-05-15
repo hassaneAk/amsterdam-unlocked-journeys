@@ -1,0 +1,22 @@
+
+# Proper MIME type for JavaScript and TypeScript files
+<IfModule mod_mime.c>
+  AddType application/javascript .js
+  AddType application/javascript .mjs
+  AddType application/javascript .ts
+  AddType application/javascript .tsx
+</IfModule>
+
+# Fallback for servers that don't use Apache
+<Files *.js>
+  Header set Content-Type "application/javascript"
+</Files>
+<Files *.mjs>
+  Header set Content-Type "application/javascript"
+</Files>
+<Files *.ts>
+  Header set Content-Type "application/javascript"
+</Files>
+<Files *.tsx>
+  Header set Content-Type "application/javascript"
+</Files>
